@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse 
 
 def home(request):
-	return render(request,'accounts/login.html')
-
-
-# Create your views here.
+	items = [1,2,3,4,'A','B','C'] 
+	name = 'SimiDev'
+	args = {'myname': name, 'numbers':items}
+	return render(request,'accounts/login.html',args)
