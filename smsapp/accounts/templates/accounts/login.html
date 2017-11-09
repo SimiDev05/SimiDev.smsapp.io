@@ -20,45 +20,12 @@
 	<form method="post">
 		{% csrf_token %}
 		{{form.as_p}}
+		<button type="submit"> Login </button>
 
 						</form>
 
-<button type="submit"> Login </button>
+
 												</div>
-
-
-
-
-
-
-
-<div class="container">
-
-<h1>{{myname}}</h1>
-<ul> 
-
-<h3>list 1</h3>
-	{% for items in numbers %}                   
-		<li>{{numbers}}</li>	
-		{%endfor%}
-
-<h3>list 2</h3>
-	{% for numbers in numbers %}
-		<li>{{numbers}}</li>	
-		{%endfor%}
-
-<h3>list 3</h3>
-	{% for numbers in numbers %}
-		<li>{{items}}</li>	
-		{%endfor%}
-
-<h3>list 4</h3>
-	{% for items in numbers %}
-		<li>{{items}}</li>	
-		{%endfor%}
-
-</ul>  </div>
-
 {% endblock %}
 
 </body>
