@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+<head>
+{% block head %}
+<title>Login</title>
+{% endblock %}
+</head>
+
+
+<body>
+{% block body %}
+
+<div class="container">
+
+	<h1> Goodbye </h1>  
+	<h2> You have been logged! </h2>
+	<p> Thanks for visiting see you again 
+		  </p>
+
+	<form method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit"> Login again </button>
+
+						</form>
+
+
+												</div>
+{% endblock %}
+
+</body>
