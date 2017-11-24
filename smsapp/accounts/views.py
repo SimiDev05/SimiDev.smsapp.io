@@ -5,8 +5,8 @@ from accounts.forms import RegistrationForm
 def home(request):
 	numbers = [1,2,3,4,'A','B','C'] 
 	name = 'SimiDev'
-
 	args = {'myname': name, 'numbers': numbers}
+	
 	return render(request,'accounts/home.html',args)
 
 def register(request):
@@ -21,3 +21,5 @@ def register(request):
 		args = {'form': form}
 		return render(request, 'accounts/reg_form.html',args)
 	
+
+
