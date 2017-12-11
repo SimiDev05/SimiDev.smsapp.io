@@ -1,0 +1,13 @@
+.wrapper{
+
+	width: 600px
+	background:#eee;
+	margin: 0 auto auto;
+}
+.heaading{
+	height: 100px;
+	background: red;
+	padding:20px;
+	text-align: center;
+
+}
