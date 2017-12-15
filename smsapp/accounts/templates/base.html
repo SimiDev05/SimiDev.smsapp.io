@@ -59,21 +59,24 @@ crossorigin="anonymous">
         <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  {% if user.is_authenticated %}
+
+{% if user.is_authenticated %}
+
  <ul class="navbar-nav mr-auto">
     <a class="navbar-brand" href="/accounts/">HOME</a>
     <li class="nav-item active"><a class="nav-link" href="/dashboard/">DASHBOARD<span class="sr-only">(current)</span></a></li>
-    <li class="nav-item"> <a class="nav-link" href="/dashboard/gallery"> GALLERY </a></li>
-    <li class="nav-item"><a class="nav-link" href="/dashboard/profile"> PROFILE </a></li>   
-  </ul>
-    <li class="nav-item"><class="nav navbar-nav navbar-right"><a class="nav-link" href="/accounts/logout"> LOGOUT </a></li>
-  {% else %}
-<ul class="navbar-nav mr-auto">
+    <li class="nav-item"> <a class="nav-link" href="{% url 'view_gallery' %}"> GALLERY </a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'view_profile'%}"> PROFILE </a></li>     </ul>
+    <li class="nav-item"><class="nav navbar-nav navbar-right"><a class="nav-link" href="accounts/logout"> LOGOUT </a></li>
+
+{% else %}
+
+    <ul class="navbar-nav mr-auto">
     <a class="navbar-brand" href="/accounts/">HOME</a>
-    <li class="nav-item"> <a class="nav-link" href="/dashboard/gallery"> GALLERY </a></li>    </ul>
-    <li class="nav-item"><a class="nav-link" href="/accounts/login"> LOGIN </a></li>  
-    <button class="btn btn-outline-success my-2 my-sm-0"><class="nav navbar-nav navbar-right"><a href="/accounts/register"> <type="submit">Register </button>
-  {% endif %}
+    <li class="nav-item"> <a class="nav-link" href="accounts/login"> LOGIN </a></li>  
+    <button class="btn btn-outline-success my-2 my-sm-0"><class="nav navbar-nav navbar-right"><a href="{% url 'register'%}"> <type="submit">Register </button>
+
+{% endif %}
 
 </div>
 </nav>

@@ -10,7 +10,7 @@ def home(request):
 	name = 'SimiDev'
 	args = {'myname': name, 'numbers': numbers}
 	
-	return render(request,'accounts/home.html',args)
+	return render(request,"accounts/home.html",args)
 
 def register(request):
 	if request.method =='POST':

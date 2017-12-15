@@ -123,3 +123,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/accounts/'
+
+LOGIN_URL = 'accounts/login/'
+
+LOGIN_EXEMPT_URLS = (
+    
+        r'^accounts/logout/$',
+        r'^accounts/register/$' 
+
+    )
